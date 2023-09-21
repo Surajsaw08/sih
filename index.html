@@ -12,11 +12,11 @@
       }
       
       .bg{
-        background-image: url(./bg.gif);
+        /* background-image: url(./bg.gif); */
         background-color: black;
-        min-height: 100vh;  
-        background-size: cover;
-        background-repeat: no-repeat;
+        min-height: 105vh;  
+        /* background-size: cover; */
+        /* background-repeat: no-repeat; */
         backdrop-filter: blur(10px);
         justify-content: center;
         align-items: center;
@@ -119,6 +119,25 @@
           height: 100px;
           background:linear-gradient(to top, #1c0522,transparent);
       }
+      .background{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -10;
+      }
+
+      @media(min-aspect-ratio: 16/9){
+        .background{
+          width: 100%;
+          height: auto;
+        }
+      }
+      @media(max-aspect-ratio: 16/9){
+        .background{
+          width: auto;
+          height: 100%;
+        }
+      }
 
     </style>
     
@@ -127,6 +146,9 @@
 <body>
     
       <div class="bg">
+        <video autoplay loop muted plays-inline class="background">
+            <source src="./bg.mp4" type="video/mp4">
+        </video>
         <header class="text-gray-600 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
