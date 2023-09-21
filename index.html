@@ -10,11 +10,16 @@
         margin: 0;
         padding: 0;
       }
+      
       .bg{
-        background-image:url('./HomeBg.jpg') ;
-        height: 100vh;  
+        background-image: url(./bg.gif);
+        background-color: black;
+        min-height: 100vh;  
         background-size: cover;
         background-repeat: no-repeat;
+        backdrop-filter: blur(10px);
+        justify-content: center;
+        align-items: center;
 
       }
       a:hover{
@@ -26,53 +31,158 @@
         left: 3px;
         width:8vh ;
       }
-      .downimg{
-        height: auto;
-        width: 80vh;
+      ul{
+        color: whitesmoke;
+        font-size: 2.7vh;
       }
+      #logoText{
+        color: whitesmoke;
+        font-size: 2.7vh;
+      }
+      ::-webkit-scrollbar{
+          width: 15px;
+      }
+      ::-webkit-scrollbar-track{
+          background: #341922;
+      }
+      ::-webkit-scrollbar-thumb{
+          background: linear-gradient(rgb(224, 103, 4),rgb(255, 255, 255),rgb(0, 129, 49));
+          border-radius: 10px;
+      }
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        /* padding: 1vh; */ 
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .heritage{
+        height: 34vh;
+      }
+      .downpart{
+        padding-top: 10vh;
+      }
+      .midhearder{  
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        transform: translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        font-weight: bolder;
+        left: 50%;
+        top: 50%;
+        cursor:default;
+        position: absolute;
+        text-align: center;
+
+      }
+      .midhearder h1{
+        color: whitesmoke;
+        font-weight: bolder;
+        align-items: center;
+        font-size: 9vh;
+        text-align: center;
+      }
+      .midhearder p{
+        color: whitesmoke;
+        border: solid;
+        border-radius: 40px;
+        font-weight: bolder;
+        align-items: center;
+        font-size: 3vh;
+        text-align: center;
+        backdrop-filter: blur(10px);
+      }
+      .midhearder button{
+        font-size: 3vh;
+        background-color: rgba(255, 255, 255, 0.522);
+        color:rgb(0, 0, 0) ;
+        border: solid;
+        border-radius: 30px;
+        padding-left:5vh ;
+        padding-right: 5vh;
+        margin:1vh;
+        backdrop-filter: blur(10px);
+      }
+      .bg a:hover{
+        font-size: 3.5vh;
+        color: rgb(41, 248, 255);
+      }
+      .bg::before{
+          content:'';
+          position: absolute; 
+          bottom: 0;
+          width: 100%;
+          height: 100px;
+          background:linear-gradient(to top, #1c0522,transparent);
+      }
+
     </style>
     
     <title>Bharat Adventure</title>
 </head>
 <body>
-    <header class="text-gray-600 body-font">
+    
       <div class="bg">
+        <header class="text-gray-600 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
               <path class="Logo"><img src="./Logo.png" alt="logo"></path>
 
-            <span class="ml-3 text-xl">Bharat Adventure</span>
+            <span class="ml-3 text-xl" id="logoText">Bharat Adventure</span>
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <ul>
             <a class="mr-5 hover:text-gray-900">Home</a>
             <a class="mr-5 hover:text-gray-900">History</a>
             <a class="mr-5 hover:text-gray-900">Art & Architecture</a>
             <a class="mr-5 hover:text-gray-900">Festival</a>
             <a class="mr-5 hover:text-gray-900">Dance & Music</a>
+            </ul>
           </nav>
           <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Contact Us
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </button>
+        </header>
+        <div class="midhearder">
+          <h1 >Welcome to Bharat</h1>
+          <p>The world is book and those who do not travel <br>read only one page</p>
+          <button>Travel</button>
         </div>
-      </header>
+          
+        </div>
+      
 
 
     </section><section class="text-gray-600 body-font">
         <div class="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
-          <img class="downimg" alt="heritage" src="./downimg.jpg">
-          <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Welcome to Bharat Adventure</h1>
-            <p class="mb-8 leading-relaxed">By this platform you are able to se more places and vrities of indian culture and Heritage</p>
-            <div class="flex w-full justify-center items-end">
-              <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
-                <label for="hero-field" class="leading-7 text-sm text-gray-600">Placeholder</label>
-                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-              </div>
-              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Varities</button>
+
+
+          <div class="row">
+          <div class="column">
+          <img class="heritage" alt="heritage" src="./downimg.jpg">
+          <h1><b>OneIndia</b></h1>
+          <p>OneIndia is referred to as the number one vernacular language portal thanks to its unparalleled popularity among the regional folks. As a leading digital publisher, OneIndia understands its responsibility while vouching and upholding true, fearless, honest, unbiased, and value-based journalism.</p>
+          </div>
+          <div class="column">
+          <img class="holi" alt="holi" src="./holiimge.png">
+          <H1><B>Holi</B></H1>
+          <p>The Holi Festival is celebrated as a way to welcome in spring, and also is seen as a new beginning where people can release all their inhibitions and start fresh.</p>
+          </div>
+          <div class="column">
+            <img class="tiger" alt="tiger" src="./tiger.png">
+            <H1 class="tigerText"><b>Tiger</b></H1>
+            <p>The magnificent tiger, Panthera tigris is a striped animal. It has a thick yellow coat of fur with dark stripes. The combination of grace, strength, agility and enormous power has earned the tiger its pride of place as the national animal of India.</p>
             </div>
-            
+          </div>
+
+          <nav>
+          <div class="downpart">
             <div class="flex">
               <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 512 512">
@@ -97,6 +207,8 @@
           </div>
         </div>
       </section>
-    </div>      
+    </div>
+    </div>
+  </nav>      
 </body>
 </html>
